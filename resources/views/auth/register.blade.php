@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="register-header text-center">REGISTER</div>
-                    <div class="text-center mb-4">Payakumbuh Kota Rendang</div>
+                    <div class="text-center mb-4">Daftarkan Akunmu Sekarang</div>
                     <form method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
