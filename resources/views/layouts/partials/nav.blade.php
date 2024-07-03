@@ -27,15 +27,18 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                 <li><a href="{{ route('users.search') }}">{{ __('app.search_your_family') }}</a></li>
-                <li><a href="{{ route('birthdays.index') }}">{{ __('birthday.birthday') }}</a></li>
+                 <li><a href="{{ route('users.search') }}"><button class="btn btn-success auth-btn">{{ __('app.search_your_family') }}</button></a></li>
+                <li><a href="{{ route('birthdays.index') }}"><button class="btn btn-success auth-btn">{{ __('birthday.birthday') }}</button></a></li>
                 <?php $mark = (preg_match('/\?/', url()->current())) ? '&' : '?';?> <!-- Bahasa Tacorps -->
                 <!-- <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li> -->
                 <!-- <li><a href="{{ url(url()->current() . $mark . 'lang=id') }}">id</a></li> -->
                 <!-- <li><a href="{{ url(url()->current() . $mark . 'lang=ur') }}">ur</a></li> -->
                 @if (Auth::guest())
-                    <li><a href="{{ route('login') }}" >Login</a></li>
-                    <li><a href="{{ route('register') }}">Daftar</a></li>
+                    <li><a href="{{ route('login') }}" ><button class="btn btn-success auth-btn">Login
+                    </button></a></li>
+                    <li><a href="{{ route('register') }}" ><button class="btn btn-success auth-btn">Daftar
+                    </button></a></li>
+
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
